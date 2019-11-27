@@ -1,55 +1,102 @@
-
+<!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header class="main-header">
-			<nav class="main-nav">
-				<a href="" class="main-header-logo">
-					<img src="img/index-logo.svg" alt="Логотип бардешопа Бородинский" width="368" height="153">
-				</a>
-				<ul class="site-nav">
-					<li><a href="info.html">Информация</a></li>
-					<li><a href="news.html">Новости</a></li>
-					<li><a href="price.html">Прайс</a></li>
-					<li><a href="catalog.html">Магазин</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
-				</ul>
-				<ul class="user-nav">
-					<li class="login-link">Вход</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="container">
-			<h1 class="high-text">Набор для путешествий Baxter of California</h1>
-			<ul class="breadcrumbs">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="index.html">Магазин</a></li>
-				<li><a href="index.html">Средство для ухода</a></li>
-				<li class="breadcrumbs-current">Набор для путешествий Baxter of California</li>
+<head>
+	<meta charset="UTF-8">
+	<title>Набор для путешествий</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="main-header">
+		<nav class="main-nav">
+			<a href="" class="main-header-logo">
+				<img src="img/logo.svg" alt="Логотип бардешопа Бородинский" width="111" height="24">
+			</a>
+			<ul class="site-nav">
+				<li><a href="info.html">Информация</a></li>
+				<li><a href="news.html">Новости</a></li>
+				<li><a href="price.html">Прайс</a></li>
+				<li class="active-nav"><a href="catalog.html">Магазин</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
-		</main>
-		<footer class="main-footer">
-				<p class="footer-contacts">Барбершоп Бородинский
-					<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
-					<br>
-					<a href="map.html">Как нас найти?</a>
-					<br>Телефон: +7(812) 666-02-66
+			<ul class="user-nav">
+				<li class="login-link">Вход</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<h1 class="high-text">Набор для путешествий Baxter of California</h1>
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="#">Магазин</a></li>
+			<li><a href="catalog.html">Средство для ухода</a></li>
+			<li class="breadcrumbs-current">Набор для путешествий Baxter of California</li>
+		</ul>
+		<section class="product-photos">
+			<h2 class="visually-hidden">Изображения товара</h2>
+			<p class="product-photo-full">
+				<img src="img/product-big.jpg" alt="Фото всего набора" width="460" height="498">
+			</p>
+			<ul>
+				<li><img src="img/product-small-1" width="140" height="149" alt="Фото в анафас"></li>
+				<li><img src="img/product-small-2" width="140" height="149" alt="Фото в профиль"></li>
+				<li><img src="img/product-small-3" width="140" height="149" alt="Фото в отдельной части"></li>
+			</ul>
+		</section>
+		<section class="product-info">
+			<h2 class="visually-hidden">Описание тавара</h2>
+			<p class="product-availability">Есть в наличии</p>
+			<p class="product-article">Артикул: dexter-ae</p>
+			<p class="product-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est doloribus magni, recusandae ex omnis quidem dicta iure ea earum quas deserunt debitis, asperiores. Libero amet possimus, iure incidunt totam ut.</p>
+			<p class="product-price">
+				<b>2 900 Р</b>
+				<a href="#" class="button">Купить</a>
+			</p>
+			<h3>В набор входят:</h3>
+			<ul>
+				<li>Средство для умывания (50 мл)</li>
+				<li>Увлажняющий крем (50 мл)</li>
+				<li>Крем для бритья (50 мл)</li>
+				<li>Крем после бритья (50 мл)</li>
+				<li>Удобная кожаная косметичка</li>
+			</ul>
+		</section>
+	</main>
+	<footer class="main-footer">
+		<p class="footer-contacts">Барбершоп Бородинский
+			<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
+			<br>
+			<a href="map.html">Как нас найти?</a>
+			<br>Телефон: +7(812) 666-02-66
+		</p>
+		<div class="footer-social">
+			<b>Давайте дружить!</b>
+			<ul>
+				<li><a href="#" class="social-button">Вконтакте</a></li>
+				<li><a href="#" class="social-button">Фейсбук</a></li>
+				<li><a href="#" class="social-button">Инстаграм</a></li>
+			</ul>
+		</div>
+		<p class="footer-copyright">
+			<b>Разработано:</b>
+			<a href="https://htmlacademy.ru" class="button">HTML Academy</a></p>
+		</footer>
+		<section class="modal modal-login">
+			<h2>Личный кабинет</h2>
+			<p>Введите свой логин и пароль</p>
+			<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+				<p>
+					<input type="text" class="login-icon-user" placeholder="Логин">
 				</p>
-				<div class="footer-social">
-					<b>Давайте дружить!</b>
-					<ul>
-						<li><a href="#" class="social-button">Вконтакте</a></li>
-						<li><a href="#" class="social-button">Фейсбук</a></li>
-						<li><a href="#" class="social-button">Инстаграм</a></li>
-					</ul>
-				</div>
-				<p class="footer-copyright">
-					<b>Разработано:</b>
-					<a href="https://htmlacademy.ru" class="button">HTML Academy</a></p>
-			</footer>
+				<p>
+					<input type="password" class="login-icon-password" placeholder="Пароль">
+				</p>
+				<p class="login-password-info">
+					<input type="checkbox" name="remember" class="visually-hidden">Запомнте меня
+					<a href="#" class="restore">Я забыл пароль!</a>
+				</p>
+				<button class="button" type="submit">Войти</button>
+			</form>
+			<span class="modal-close">x</span>
+		</section>
 	</body>
-</html>
+	</html>
