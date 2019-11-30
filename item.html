@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Набор для путешествий</title>
-	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="inner-page">
 	<header class="main-header">
 		<nav class="main-nav">
-			<a href="" class="main-header-logo">
+			<a href="index.html" class="main-header-logo">
 				<img src="img/logo.svg" alt="Логотип бардешопа Бородинский" width="111" height="24">
 			</a>
 			<ul class="site-nav">
@@ -20,7 +22,7 @@
 			</ul>
 			<ul class="user-nav">
 				<li class="login-link">
-					<button class="login-button" type="button">Вход</button>
+					<a class="login-button">Вход<a>
 				</li>
 			</ul>
 		</nav>
@@ -38,7 +40,7 @@
 			<p class="product-photo-full">
 				<img src="img/product-big.jpg" alt="Фото всего набора" width="460" height="498">
 			</p>
-			<ul>
+			<ul class="img-list">
 				<li><img src="img/product-small-1.png" width="140" height="149" alt="Фото в анафас"></li>
 				<li><img src="img/product-small-2.png" width="140" height="149" alt="Фото в профиль"></li>
 				<li><img src="img/product-small-3.png" width="140" height="149" alt="Фото в отдельной части"></li>
@@ -53,8 +55,8 @@
 				<b>2 900 Р</b>
 				<a href="#" class="button">Купить</a>
 			</p>
-			<h3>В набор входят:</h3>
-			<ul>
+			<h3 class="high-text">В набор входят:</h3>
+			<ul class="prod-list">
 				<li>Средство для умывания (50 мл)</li>
 				<li>Увлажняющий крем (50 мл)</li>
 				<li>Крем для бритья (50 мл)</li>

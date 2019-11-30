@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Каталог</title>
-	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="inner-page">
 	<header class="main-header">
 		<nav class="main-nav">
-			<a href="" class="main-header-logo">
+			<a href="index.html" class="main-header-logo">
 				<img src="img/logo.svg" alt="Логотип бардешопа Бородинский" width="111" height="24">
 			</a>
 			<ul class="site-nav">
@@ -20,30 +22,30 @@
 			</ul>
 			<ul class="user-nav">
 				<li class="login-link">
-					<button class="login-button" type="button">Вход</button>
+					<a class="login-button">Вход</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
 	<main class="container">
-		<h1 class="high-text">Средства для ухода</h1>
+		<h1 class="big-text">Средства для ухода</h1>
 		<ul class="breadcrumbs">
 			<li><a href="index.html">Главная</a></li>
 			<li><a href="#">Магазин</a></li>
-			<li><a href="breadcrumbs-current">Средство для ухода</a></li>
+			<li class="breadcrumbs-current">Средство для ухода</li>
 		</ul>
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
 			<form action="#" class="filter" method="get">
 				<fieldset>
-					<legend>Производители:</legend>
-					<ul>
+					<legend class="high-text">Производители:</legend>
+					<ul class="filter-list-1">
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
 							<label for="filter-baxter-of-california">Baxter of California</label>
 						</li>
 						<li class="filter-option">
-							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="mr-natty" id="filter-mr-natty">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="mr-natty" id="filter-mr-natty" disabled>
 							<label for="filter-mr-natty">Mr Natty</label>
 						</li>
 						<li class="filter-option">
@@ -65,8 +67,8 @@
 					</ul>
 				</fieldset>
 				<fieldset>
-					<legend>Группы товаров:</legend>
-					<ul>
+					<legend class="high-text">Группы товаров:</legend>
+					<ul class="filter-list-2">
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving" id="filter-shave">
 							<label for="filter-shave">Itisrantn rsaetnres</label>
@@ -180,7 +182,7 @@
 			</ul>
 			<ul class="pagination-list">
 				<li class="pagination-item"><a href="#">1</a></li>
-				<li class="pagination-item pagination-item-current"><a>2</a></li>
+				<li class="pagination-item pagination-item-current"><a href="#">2</a></li>
 				<li class="pagination-item"><a href="#">3</a></li>
 				<li class="pagination-item"><a href="#">4</a></li>
 			</ul>
