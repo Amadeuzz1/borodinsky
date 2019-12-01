@@ -9,7 +9,7 @@
 </head>
 <body class="inner-page">
 	<header class="main-header">
-		<nav class="main-nav">
+		<nav class="main-nav container">
 			<a href="index.html" class="main-header-logo">
 				<img src="img/logo.svg" alt="Логотип бардешопа Бородинский" width="111" height="24">
 			</a>
@@ -34,34 +34,36 @@
 			<li class="breadcrumbs-current">Прайс лист</li>
 		</ul>
 		<b class="large-text">Истинно мужская классика</b>
-		<section class="sredstva">
-			<h2 class="visually-hidden">Средства</h2>
-			<b class="high-text">Мы используем только лучшие стредства:</b>
-			<ul class="sredstva-list">
-				<li>Baxer of California</li>
-				<li>Mr Natty</li>
-				<li>Suaversito</li>
-				<li>Malin+ Gotec</li>
-			</ul>
-		</section>
-		<section class="price">
-			<h2 class="visually-hidden">Цена</h2>
-			<b class="high-text">Цены на услуги наших мастеров:</b>
-			<table class="price-table">
-				<tr>
-					<td>Стрижка</td>
-					<td class="price-td">1500</td>
-				</tr>
-				<tr>
-					<td>Стрижка бороды</td>
-					<td class="price-td">500</td>
-				</tr>
-				<tr>
-					<td>Накрутка усов</td>
-					<td class="price-td">350</td>
-				</tr>
-			</table>
-		</section>
+		<div class="catalog-columns">
+			<section class="sredstva">
+				<h2 class="visually-hidden">Средства</h2>
+				<b class="high-text">Мы используем только лучшие стредства:</b>
+				<ul class="sredstva-list">
+					<li>Baxer of California</li>
+					<li>Mr Natty</li>
+					<li>Suaversito</li>
+					<li>Malin+ Gotec</li>
+				</ul>
+			</section>
+			<section class="price">
+				<h2 class="visually-hidden">Цена</h2>
+				<b class="high-text">Цены на услуги наших мастеров:</b>
+				<table class="price-table">
+					<tr>
+						<td>Стрижка</td>
+						<td class="price-td">1500</td>
+					</tr>
+					<tr>
+						<td>Стрижка бороды</td>
+						<td class="price-td">500</td>
+					</tr>
+					<tr>
+						<td>Накрутка усов</td>
+						<td class="price-td">350</td>
+					</tr>
+				</table>
+			</section>
+		</div>
 		<section class="slovo">
 			<h2 class="visually-hidden">О нас</h2>
 			<b class="high-text">Несколько слов о нас:</b>
@@ -70,47 +72,50 @@
 		</section>
 	</main>
 	<footer class="main-footer">
-		<p class="footer-contacts">Барбершоп Бородинский
-			<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
-			<br>
-			<a href="map.html">Как нас найти?</a>
-			<br>Телефон: +7(812) 666-02-66
-		</p>
-		<div class="footer-social">
-			<b>Давайте дружить!</b>
-			<ul>
-				<li><a href="#" class="social-button">Вконтакте</a></li>
-				<li><a href="#" class="social-button">Фейсбук</a></li>
-				<li><a href="#" class="social-button">Инстаграм</a></li>
-			</ul>
+		<div class="container">
+			<p class="footer-contacts">Барбершоп Бородинский
+				<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
+				<br>
+				<a href="map.html">Как нас найти?</a>
+				<br>Телефон: +7(812) 666-02-66
+			</p>
+			<div class="footer-social">
+				<b>Давайте дружить!</b>
+				<ul>
+					<li><a href="#" class="social-button">Вконтакте</a></li>
+					<li><a href="#" class="social-button">Фейсбук</a></li>
+					<li><a href="#" class="social-button">Инстаграм</a></li>
+				</ul>
+			</div>
+			<p class="footer-copyright">
+				<b>Разработано:</b>
+				<a href="https://htmlacademy.ru" class="button">HTML Academy</a>
+			</p>
 		</div>
-		<p class="footer-copyright">
-			<b>Разработано:</b>
-			<a href="https://htmlacademy.ru" class="button">HTML Academy</a></p>
-		</footer>
-		<section class="modal modal-login">
-			<h2>Личный кабинет</h2>
-			<p>Введите свой логин и пароль</p>
-			<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
-				<p>
-					<label class="visually-hidden" for="user-login">Логин</label>
-					<input type="text" id="user-login" class="login-icon-user" placeholder="Логин">
-				</p>
-				<p>
-					<label class="visually-hidden" for="user-password">Пароль</label>
-					<input type="password" id="user-password" class="login-icon-password" placeholder="Пароль">
-				</p>
-				<p class="login-password-info">
-					<label class="login-checkbox">
-						<input type="checkbox" name="remember" class="visually-hidden">
-						<span class="checkbox-indicator"></span>
-						Запомнте меня
-					</label>
-					<a href="#" class="restore">Я забыл пароль!</a>
-				</p>
-				<button class="button" type="submit">Войти</button>
-			</form>
-			<button class="modal-close" type="button">Закрыть</button>
-		</section>
-	</body>
-	</html>
+	</footer>
+	<section class="modal modal-login">
+		<h2>Личный кабинет</h2>
+		<p>Введите свой логин и пароль</p>
+		<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+			<p>
+				<label class="visually-hidden" for="user-login">Логин</label>
+				<input type="text" id="user-login" class="login-icon-user" placeholder="Логин">
+			</p>
+			<p>
+				<label class="visually-hidden" for="user-password">Пароль</label>
+				<input type="password" id="user-password" class="login-icon-password" placeholder="Пароль">
+			</p>
+			<p class="login-password-info">
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember" class="visually-hidden">
+					<span class="checkbox-indicator"></span>
+					Запомнте меня
+				</label>
+				<a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
+</body>
+</html>

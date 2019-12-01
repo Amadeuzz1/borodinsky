@@ -13,18 +13,22 @@
 			<a href="" class="main-header-logo">
 				<img src="img/index-logo.svg" width="368" height="153" alt="Логотип бардешопа Бородинский">
 			</a>
-			<ul class="site-nav">
-				<li><a href="info.html">Информация</a></li>
-				<li><a href="news.html">Новости</a></li>
-				<li><a href="price.html">Прайс</a></li>
-				<li><a href="catalog.html">Магазин</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
-			</ul>
-			<ul class="user-nav">
-				<li class="login-link">
-					<a class="login-button">Вход</a>
-				</li>
-			</ul>
+			<div class="main-nav-wrapper">
+				<div class="container">
+					<ul class="site-nav">
+						<li><a href="info.html">Информация</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="price.html">Прайс</a></li>
+						<li><a href="catalog.html">Магазин</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+					<ul class="user-nav">
+						<li class="login-link">
+							<a class="login-button">Вход</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
 	<main class="container">
@@ -38,7 +42,7 @@
 				</li>
 				<li class="feature-item">
 					<h3>Круто</h3>
-					<p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино!Во всяком случае внешне.</p>
+					<p>Забудьте, как вы стриглись раньше. <br> Мы сделаем из вас звезду футбола или кино!Во всяком случае внешне.</p>
 				</li>
 				<li class="feature-item">
 					<h3>Дорого</h3>
@@ -46,7 +50,7 @@
 				</li>
 			</ul>
 		</section>
-		<div class="inner-page">
+		<div class="inner-page inner-style">
 			<section class="news">
 				<h2 class="big-text">Новости</h2>
 				<ul class="news-list">
@@ -71,7 +75,7 @@
 				<button class="button gallery-button gallery-batton-next" type="button">Вперед</button>
 			</section>
 		</div>
-		<div class="inner-page">
+		<div class="inner-page inner-style">
 			<section class="contacts">
 				<h2 class="big-text">Контактная информация</h2>
 				<p>Барбершоп Бородинский<br>
@@ -117,54 +121,57 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<p class="footer-contacts">Барбершоп Бородинский
-			<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
-			<br>
-			<a href="map.html">Как нас найти?</a>
-			<br>Телефон: +7(812) 666-02-66
-		</p>
-		<div class="footer-social">
-			<b>Давайте дружить!</b>
-			<ul>
-				<li><a href="#" class="social-button">Вконтакте</a></li>
-				<li><a href="#" class="social-button">Фейсбук</a></li>
-				<li><a href="#" class="social-button">Инстаграм</a></li>
-			</ul>
-		</div>
-		<p class="footer-copyright">
-			<b>Разработано:</b>
-			<a href="https://htmlacademy.ru" class="button">HTML Academy</a></p>
-		</footer>
-		<section class="modal modal-login">
-			<h2>Личный кабинет</h2>
-			<p>Введите свой логин и пароль</p>
-			<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
-				<p>
-					<label class="visually-hidden" for="user-login">Логин</label>
-					<input type="text" id="user-login" class="login-icon-user" placeholder="Логин">
-				</p>
-				<p>
-					<label class="visually-hidden" for="user-password">Пароль</label>
-					<input type="password" id="user-password" class="login-icon-password" placeholder="Пароль">
-				</p>
-				<p class="login-password-info">
-					<label class="login-checkbox">
-						<input type="checkbox" name="remember" class="visually-hidden">
-						<span class="checkbox-indicator"></span>
-						Запомнте меня
-					</label>
-					<a href="#" class="restore">Я забыл пароль!</a>
-				</p>
-				<button class="button" type="submit">Войти</button>
-			</form>
-			<button class="modal-close" type="button">Закрыть</button>
-		</section>
-		<section class="modal modal-map">
-			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<p>
-				<img src="img/map.png" width="780" height="560" alt= "Адрес: г. Санкт-Петербург, Б. конющенная, д. 198">
+		<div class="container">
+			<p class="footer-contacts">Барбершоп Бородинский
+				<br>Адрес: г. Санкт-Петербург, Б. конющенная, д. 198
+				<br>
+				<a href="map.html">Как нас найти?</a>
+				<br>Телефон: +7(812) 666-02-66
 			</p>
-			<button class="modal-close" type="button">Закрыть</button>
-		</section>
-	</body>
-	</html>
+			<div class="footer-social">
+				<b>Давайте дружить!</b>
+				<ul>
+					<li><a href="#" class="social-button">Вконтакте</a></li>
+					<li><a href="#" class="social-button">Фейсбук</a></li>
+					<li><a href="#" class="social-button">Инстаграм</a></li>
+				</ul>
+			</div>
+			<p class="footer-copyright">
+				<b>Разработано:</b>
+				<a href="https://htmlacademy.ru" class="button">HTML Academy</a>
+			</p>
+		</div>
+	</footer>
+	<section class="modal modal-login border-box-component">
+		<h2>Личный кабинет</h2>
+		<p>Введите свой логин и пароль</p>
+		<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+			<p>
+				<label class="visually-hidden" for="user-login">Логин</label>
+				<input type="text" id="user-login" class="login-icon-user" placeholder="Логин">
+			</p>
+			<p>
+				<label class="visually-hidden" for="user-password">Пароль</label>
+				<input type="password" id="user-password" class="login-icon-password" placeholder="Пароль">
+			</p>
+			<p class="login-password-info">
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember" class="visually-hidden">
+					<span class="checkbox-indicator"></span>
+					Запомнте меня
+				</label>
+				<a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
+	<section class="modal modal-map">
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<p>
+			<img src="img/map.png" width="780" height="560" alt= "Адрес: г. Санкт-Петербург, Б. конющенная, д. 198">
+		</p>
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
+</body>
+</html>

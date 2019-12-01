@@ -1,3 +1,17 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+html,
+body {
+	min-width: 1122px;
+	min-height: 1750px;
+}
+
 body
 {
     font-family: 'PT Sans Narrow', Arial, sans-serif;
@@ -21,14 +35,78 @@ a {
 	text-decoration: none;
 }
 
+.catalog-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.border-box-component {
+	box-sizing: border-box;
+}
+
+.inner-page .main-header {
+	margin-bottom: 50px;
+	background-color: #000000;
+}
+
 .main-nav {
 	font-size: 16px;
 	line-height: 20px;
 	color: #ffffff;
 	background-color: #000000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.site-nav,
+.main-header-logo {
+	order: 2;
+}
+
+.inner-page .main-nav {
+	align-items: flex-start;
+	flex-direction: row;
+}
+
+.inner-page .main-header-logo {
+	order: 0;
+	padding: 23px 20px;
+	width: 111px;
+	height: 24px;
+}
+
+.inner-page .user-nav {
+	margin-left: auto;
+}
+
+.main-nav-wrapper {
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+.container {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-nav-wrapper .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.features-list {
+	list-style: none;
+	justify-content: space-between;
+	display: flex;
+	margin: 0;
+	margin-bottom: 80px;
+	padding: 0;
+}
+
+.site-nav {
+	list-style: none;
+}
 .user-nav {
 	list-style: none;
 }
@@ -47,19 +125,27 @@ a {
 
 .inner-page {
   color: #000000;
-
   background-color: #f9f6f3;
   background-image: url("../img/layer-1.jpg");
   background-position: 0 0;
-  background-repeat: repeat;
+  background-repeat: repeat; 
+}
+
+.inner-style {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 80px;
+	margin-bottom: 35px;
 }
 
 .feature-item {
-	list-style: none;
 	text-align: center;
+	width: 300px;
 }
 
 .big-text {
+	margin: 0 0 15px 0;
+	padding: 0;
 	color: #000000;
 	font-size: 30px;
 	line-height: 42px;
@@ -106,6 +192,17 @@ a {
 	background-image: url("../img/layer-2.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+  margin-top: 65px;
+  padding: 60px 0 40px 0;
+}
+
+.main-footer .container {
+	display: flex;
+}
+
+.footer-contacts {
+	width: 320px;
+	margin: 0 80px 0 0;
 }
 
 .footer-contacts a {
@@ -120,6 +217,7 @@ a {
 }
 
 .footer-social {
+	width: 145px;
   text-align: center;
 }
 
@@ -140,6 +238,8 @@ a {
 }
 
 .footer-copyright {
+	margin: 0 0 0 auto;
+	width: 145px;
   text-align: center;
 }
 
@@ -150,15 +250,30 @@ a {
   background-color: #ffffff;
 }
 
+.inner-page .main-footer {
+	margin-top: 45px;
+}
+
+.modal {
+	margin: 0 auto;
+}
+
 .modal-login {
 	color: #000000;
-
+	width: 460px;
+	height: 385px;
+	padding: 50px 80px 60px;
 	line-height: auto;
 	font-size: 14px;
   background-color: #f9f6f3;
   background-image: url("../img/layer-1.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.modal-map {
+	width: 780px;
+	border: 7px solid #ffffff;
 }
 
 .modal-login h2 {
@@ -191,6 +306,8 @@ a {
 }
 
 .breadcrumbs {
+	margin: 0 0 50px 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -208,6 +325,8 @@ a {
 }
 
 .large-text {
+	display: block;
+	margin-bottom: 70px;
 	font-size: 48px;
 	line-height: 48px;
 }
@@ -219,10 +338,6 @@ a {
 
 .sredstva-list {
 	list-style: none;
-}
-
-.price-table {
-
 }
 
 .prod-list,
@@ -248,6 +363,10 @@ a {
 	text-align: center;
 }
 
+.filters {
+	width: 180px;
+}
+
 .filter-list-1,
 .filter-list-2 {
 	list-style: none;
@@ -264,14 +383,27 @@ a {
 	opacity: 0.5;
 }
 
-.catalog-list,
-.pagination-list {
+.catalog {
+	width: 700px;
+}
+
+.catalog-list {
 	list-style: none;
+	margin: 0 0 25px 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .catalog-item {
+	margin: 0 20px 20px 0;
+	width: 220px;
 	background-color: #ffffff;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+	margin-right: 0;
 }
 
 .catalog-item:hover,
@@ -301,15 +433,30 @@ a {
 	line-height: 18px;
 }
 
-.pagination-list a {
+.pagination-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.pagination-item a {
+	display: inline-block;
 	color: #ffffff;
 	background-color: #000000;
+	height: 100%;
+	width: 100%;
 }
 
 .pagination-list a:hover,
 .pagination-list a:focus,
 .pagination-list a:active {
 	background-color: #663d15;
+}
+
+.pagination-item {
+	width: 43px;
+	height: 43px;
 }
 
 .pagination-item-current a {
@@ -322,4 +469,12 @@ a {
 .pagination-item-current a:active {
 	color: #000000;
 	background-color: #ffffff;
+}
+
+.product-photos {
+	width: 460px;
+}
+
+.product-info {
+	width: 390px;
 }
