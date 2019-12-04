@@ -296,6 +296,7 @@ img {
 
 .news-item p {
 	margin: 0;
+	font-weight: 400;
 }
 
 .news-item {
@@ -347,6 +348,7 @@ img {
 .contacts p {
 	margin: 0;
 	margin-bottom: 21px;
+	font-weight: 400;
 }
 
 .appointment {
@@ -354,6 +356,7 @@ img {
 }
 
 .appointment-info {
+	font-weight: 400;
 	margin: 0;
 	margin-bottom: 13px;
 }
@@ -648,6 +651,7 @@ img {
 .sredstva-list li {
 	position: relative;
 	margin-bottom: 13px;
+	font-weight: 400;
 }
 
 .sredstva-list :last-child {
@@ -674,6 +678,7 @@ img {
 	border-collapse: collapse;
 	width: 100%;
 	height: 125px;
+	font-weight: 400;
 }
 
 .price-table td {
@@ -698,6 +703,7 @@ img {
 
 .prod-list li {
 	position: relative;
+	font-weight: 400;
 }
 
 .prod-list li::before {
@@ -754,9 +760,11 @@ img {
 	text-align: center;
 	vertical-align: middle;
 	line-height: 44px;
+	font-weight: 400;
 }
 
 .product-text {
+	font-weight: 400;
 	margin-bottom: 40px;
 }
 
@@ -766,6 +774,7 @@ img {
 }
 
 .slovo p {
+	font-weight: 400;
 	width: 380px;
 	margin-right: 100px;
 }
@@ -796,10 +805,15 @@ img {
 
 .filter-list-1,
 .filter-list-2 {
+	font-weight: 400;
 	list-style: none;
 	line-height: 18px;
 	margin: 0;
 	margin-bottom: 50px;
+}
+
+.filter label{
+	cursor: pointer;
 }
 
 .filter input[type="checkbox"] + label:before {
@@ -914,6 +928,7 @@ img {
 
 .catalog-category,
 .catalog-item-title {
+	font-weight: 400;
 	color: #000000;
 	font-size: 14px;
 	line-height: 18px;
@@ -928,6 +943,7 @@ img {
 }
 
 .catalog-item-price b {
+	font-weight: 400;
 	display: inline-block;
 	margin-right: -2px;
 	width: 109px;
