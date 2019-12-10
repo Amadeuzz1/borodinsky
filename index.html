@@ -159,17 +159,17 @@
 				</p>
 			</div>
 		</footer>
-		<section class="modal modal-login border-box-component">
+		<section class="modal modal-login">
 			<h2>Личный кабинет</h2>
-			<p>Введите свой логин и пароль</p>
+			<p>Введите пожалуйста свой логин и пароль</p>
 			<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
 				<p>
 					<label class="visually-hidden" for="user-login">Логин</label>
-					<input type="text" id="user-login" class="login-icon-user" placeholder="Логин">
+					<input type="text" id="user-login" class="login-icon-user" placeholder="Логин" required>
 				</p>
 				<p>
 					<label class="visually-hidden" for="user-password">Пароль</label>
-					<input type="password" id="user-password" class="login-icon-password" placeholder="Пароль">
+					<input type="password" id="user-password" class="login-icon-pass" placeholder="Пароль" required>
 				</p>
 				<p class="login-password-info">
 					<label class="login-checkbox">
@@ -179,16 +179,86 @@
 					</label>
 					<a href="#" class="restore">Я забыл пароль!</a>
 				</p>
-				<button class="button" type="submit">Войти</button>
+				<button class="button btn-log" type="submit">Войти</button>
 			</form>
-			<button class="modal-close" type="button">Закрыть</button>
+			<button class="modal-close" type="button"></button>
 		</section>
 		<section class="modal modal-map">
 			<h2 class="visually-hidden">Как до нас добраться</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036252949425!2d30.320864080180478!3d59.93871916914324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575994531938!5m2!1sru!2sru" width="780" height="570" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			<p>
-				<img src="img/map.png" width="780" height="560" alt= "Адрес: г. Санкт-Петербург, Б. конющенная, д. 198">
+				<img src="img/map.png" width="780" height="570" alt= "Адрес: г. Санкт-Петербург, Б. конющенная, д. 198">
 			</p>
-			<button class="modal-close" type="button">Закрыть</button>
+			<button class="modal-close" type="button"></button>
 		</section>
+		<script>
+			let link = document.querySelector(".login-button");
+			let popapLogin = document.querySelector(".modal-login");
+			let close = document.querySelector(".modal-close");
+			let closeMap = document.querySelector(".modal-map .modal-close");
+			let popapMap = document.querySelector(".footer-contacts a");
+			let mapImg = document.querySelector(".modal-map");
+			let popapMap2 = document.querySelector(".contacts-button");
+			let login = popapLogin.querySelector(".login-icon-user");
+			let pass = popapLogin.querySelector(".login-icon-pass");
+			let form = popapLogin.querySelector(".login-form");
+			let storage = localStorage.getItem("login");
+
+			link.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				popapLogin.classList.add("modal-show");
+
+				if(storage) {
+					login.value = storage;
+					pass.focus();
+				} else {
+					login.focus();
+				}
+			});
+
+			close.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				popapLogin.classList.remove("modal-show");
+				popapLogin.classList.remove("modal-error");
+			});
+
+			popapMap.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				mapImg.classList.add("modal-show");
+			});
+
+			closeMap.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				mapImg.classList.remove("modal-show");
+			});
+
+			popapMap2.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				mapImg.classList.add("modal-show");
+			});
+
+			form.addEventListener("submit", function(evt) {
+				if(login.value.length < 4) {
+					evt.preventDefault();
+					popapLogin.classList.remove("modal-error");
+					popapLogin.offsetWidth = popapLogin.offsetWidth;
+					popapLogin.classList.add("modal-error");
+				} else {
+					localStorage.setItem("login", login.value);
+				}
+			});
+
+			window.addEventListener("keydown", function(evt) {
+				if(evt.keyCode === 27) {
+					if(mapImg.classList.contains("modal-show")) {
+						mapImg.classList.remove("modal-show");
+					}
+					if(popapLogin.classList.contains("modal-show")) {
+						popapLogin.classList.remove("modal-show");
+						popapLogin.classList.remove("modal-error");
+					}
+				}
+			});
+		</script>
 	</body>
 	</html>
